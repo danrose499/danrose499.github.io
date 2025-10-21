@@ -11,25 +11,25 @@
   <div class="timeline">
     <TimelineItem
       side="left"
-      title="Software Engineer"
-      company="BNY Mellon - Pershing"
-      dateRange="2023 - Present"
+      title="Software Engineer (Senior Associate)"
+      company="BNY Pershing"
+      dateRange="August 2022 - Present"
       description={[
         "Develop and maintain trading platform systems",
         "Implement scalable microservices architecture",
         "Collaborate with cross-functional teams on system integration"
       ]}
       image={pershingImg}
-      companyUrl="https://www.bnymellon.com"
+      companyUrl="https://www.bny.com/pershing"
     />
     <TimelineItem
       side="right"
-      title="Software Engineer"
-      company="BNY Mellon"
-      dateRange="2022 - 2023"
+      title="Software Engineer (Intern)"
+      company="BNY"
+      dateRange="June 2021 - August 2021"
       description="Developed financial applications and services using modern web technologies. Focused on backend systems and API development."
       image={bnyImg}
-      companyUrl="https://www.bnymellon.com"
+      companyUrl="https://www.bny.com"
     />
     <TimelineItem
       side="left"
