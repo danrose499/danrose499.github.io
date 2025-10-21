@@ -219,6 +219,26 @@
   display: none;
 }
 
+/* In landscape or on wider screens, let the content expand outward opposite the image */
+@media (orientation: landscape), (min-width: 768px) {
+  .timeline-item {
+    width: 100%;
+  }
+
+  .content {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+
+  /* Add spacing between content and image depending on side */
+  .timeline-item.left .content {
+    margin-right: 2rem;
+  }
+  .timeline-item.right .content {
+    margin-left: 2rem;
+  }
+}
+
 @media (max-width: 640px) and (orientation: portrait) {
   .timeline-item {
     flex-direction: column;
