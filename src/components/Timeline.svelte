@@ -10,32 +10,44 @@
 <div class="timeline-container">
   <div class="timeline">
     <TimelineItem
-    side="left"
-    title="Current Position"
-    description={[
-        "Software Engineer at XYZ",
-        "Working on frontend and backend",
-        "Leading a small team"
-    ]}
-    image={pershingImg}
+      side="left"
+      title="Software Engineer"
+      company="BNY Mellon - Pershing"
+      dateRange="2023 - Present"
+      description={[
+        "Develop and maintain trading platform systems",
+        "Implement scalable microservices architecture",
+        "Collaborate with cross-functional teams on system integration"
+      ]}
+      image={pershingImg}
+      companyUrl="https://www.bnymellon.com"
     />
     <TimelineItem
       side="right"
-      title="Current Position"
-      description="Software Engineer at XYZ"
+      title="Software Engineer"
+      company="BNY Mellon"
+      dateRange="2022 - 2023"
+      description="Developed financial applications and services using modern web technologies. Focused on backend systems and API development."
       image={bnyImg}
+      companyUrl="https://www.bnymellon.com"
     />
     <TimelineItem
       side="left"
-      title="College"
-      description="B.S. Computer Science at ABC University"
+      title="Student"
+      company="City College of New York (CCNY)"
+      dateRange="2018 - 2022"
+      description="B.S. in Computer Science with focus on software engineering and data structures. Relevant coursework included algorithms, databases, and software development."
       image={ccnyImg}
+      companyUrl="https://www.ccny.cuny.edu"
     />
     <TimelineItem
       side="right"
-      title="High School"
-      description="Graduated in 2015"
+      title="Graduate"
+      company="Dr. Ronald E. McNair High School"
+      dateRange="2014 - 2018"
+      description="High school diploma with honors. Participated in robotics club and computer science competitions."
       image={drsImg}
+      companyUrl="https://www.schools.nyc.gov"
     />
   </div>
 </div>
