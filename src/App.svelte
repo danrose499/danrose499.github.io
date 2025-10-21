@@ -13,6 +13,7 @@ main {
   font-family: sans-serif;
   background: #f5f5f5;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 h1 {
   text-align: center;
@@ -49,6 +50,14 @@ h3 {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  h1,
+  h3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 </style>

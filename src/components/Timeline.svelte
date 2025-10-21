@@ -67,4 +67,17 @@
 }
 
 /* Removed .timeline-line styles */
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .timeline-container {
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .timeline {
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+}
 </style>

@@ -12,6 +12,7 @@
 
   let itemEl;
   let hasAnimated = false;
+  const isMobilePortrait = () => typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 640px) and (orientation: portrait)').matches;
 
   function handleImageClick() {
     if (companyUrl) {
@@ -25,6 +26,12 @@
     if (itemEl) {
       console.log('Element found:', itemEl);
       
+      // On mobile portrait, avoid horizontal transforms to prevent overflow
+      if (isMobilePortrait()) {
+        gsap.set(itemEl, { x: 0, opacity: 1 });
+        return;
+      }
+
       // Set initial state - slightly off-screen and invisible
       gsap.set(itemEl, {
         x: side === "left" ? -50 : 50,
@@ -83,11 +90,22 @@
         class="company {companyUrl ? 'clickable' : ''}"
         on:click={handleImageClick}
         role={companyUrl ? 'button' : 'div'}
-        tabindex={companyUrl ? '0' : null}
+        tabindex={companyUrl ? 0 : null}
         on:keydown={(e) => companyUrl && e.key === 'Enter' && handleImageClick()}
       >
         {company}
       </div>
+    {/if}
+    {#if image}
+      <img 
+        src={image} 
+        alt={company || title} 
+        class="graphic-inline {companyUrl ? 'clickable' : ''}"
+        on:click={handleImageClick}
+        role={companyUrl ? 'button' : 'img'}
+        tabindex={companyUrl ? 0 : null}
+        on:keydown={(e) => companyUrl && e.key === 'Enter' && handleImageClick()}
+      />
     {/if}
     {#if dateRange}
       <div class="date-range">{dateRange}</div>
@@ -106,10 +124,10 @@
     <img 
       src={image} 
       alt={company || title} 
-      class="graphic {companyUrl ? 'clickable' : ''}"
+      class="graphic-external graphic {companyUrl ? 'clickable' : ''}"
       on:click={handleImageClick}
       role={companyUrl ? 'button' : 'img'}
-      tabindex={companyUrl ? '0' : null}
+      tabindex={companyUrl ? 0 : null}
       on:keydown={(e) => companyUrl && e.key === 'Enter' && handleImageClick()}
     />
   {/if}
@@ -194,5 +212,54 @@
 }
 .content li {
   margin-bottom: 0.3rem;
+}
+
+/* Inline graphic that only appears on mobile portrait */
+.graphic-inline {
+  display: none;
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    flex-direction: column;
+  }
+
+  .content {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* Hide the external image beside the card on mobile */
+  .graphic-external {
+    display: none;
+  }
+
+  /* Show the inline image within the card on mobile */
+  .graphic-inline {
+    display: block;
+    width: 72px;
+    height: auto;
+    margin: 0 0 0.5rem 0;
+  }
+
+  /* Ensure any images within content never overflow */
+  .content img,
+  .graphic-inline {
+    max-width: 100%;
+    height: auto;
+  }
 }
 </style>
