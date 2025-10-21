@@ -3,7 +3,7 @@
 </script>
 
 <main>
-  <h1>Hi! My name is <span class="name">Daniel Rosenthal</span></h1>
+  <h1>👋 Hi! My name is <span class="name">Daniel Rosenthal</span></h1>
   <h3>I'm a Software Enginner based out of NYC<br>Scroll down to see my journey</h3>
   <Timeline />
 </main>
