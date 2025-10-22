@@ -3,8 +3,9 @@
 
   import ccnyImg from "../assets/images/CCNY.png";
   import bnyImg from "../assets/images/BNY.png";
-  import pershingImg from "../assets/images/BNY_Pershing.svg";
-  import drsImg from "../assets/images/DRS.png";
+  import pershingImg from "../assets/images/BNY_Pershing.png";
+  import cunyImg from "../assets/images/CUNY.png";
+  import nySenateImg from "../assets/images/NY_Senate.png";
 </script>
 
 <div class="timeline-container">
@@ -40,6 +41,19 @@
     />
     <TimelineItem
       side="left"
+      title="Computer Science Tutor"
+      company="CUNY 2X Tech"
+      dateRange="January 2020 - May 2020"
+      description={[
+        "Conducted biweekly tutoring sessions to support struggling computer science students at The City College of New York (CUNY).",
+        "Adapted teaching strategies to remote learning during COVID-19, ensuring continued academic support.",
+        "Contributed to the CUNY 2X Tech initiative, helping increase the number of CUNY graduates in tech-related fields."
+      ]}
+      image={cunyImg}
+      companyUrl="https://www.ccny.cuny.edu/news/city-college-partners-nyc-increase-number-tech-grads"
+    />
+    <TimelineItem
+      side="right"
       title="Student"
       company="City College of New York (CCNY)"
       dateRange="2018 - 2022"
@@ -50,12 +64,16 @@
       companyUrl="https://www.ccny.cuny.edu"
     />
     <TimelineItem
-      side="right"
-      title="Graduate"
-      company="Dr. Ronald E. McNair High School"
-      dateRange="2014 - 2018"
-      description="High school diploma with honors. Participated in robotics club and computer science competitions."
-      image={drsImg}
+      side="left"
+      title="Summer Intern"
+      company="New York State Senate"
+      dateRange="July 2016 - August 2016"
+      description={[
+        "Summer Intern for New York State Senator Todd Kaminsky (9th District)",
+        "Spoke with constituents over the phone and in person to help the Senator better evaluate the needs of his district",
+        "Managed casework to allow the office to run as efficiently as possible"
+      ]}
+      image={nySenateImg}
       companyUrl="https://www.schools.nyc.gov"
     />
   </div>
