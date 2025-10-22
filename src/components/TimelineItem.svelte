@@ -27,14 +27,11 @@
       console.log('Element found:', itemEl);
       
       // On mobile portrait, avoid horizontal transforms to prevent overflow
-      if (isMobilePortrait()) {
-        gsap.set(itemEl, { x: 0, opacity: 1 });
-        return;
-      }
+      const offset = isMobilePortrait() ? 15 : 50;
 
       // Set initial state - slightly off-screen and invisible
       gsap.set(itemEl, {
-        x: side === "left" ? -50 : 50,
+        x: side === "left" ? -offset : offset,
         opacity: 0
       });
       
@@ -60,7 +57,7 @@
                 hasAnimated = false;
                 
                 gsap.to(itemEl, {
-                  x: side === "left" ? -50 : 50,
+                  x: side === "left" ? -offset : offset,
                   opacity: 0,
                   duration: 0.7,
                   ease: "power2.in"
