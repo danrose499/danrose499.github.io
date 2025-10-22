@@ -2,7 +2,7 @@
   import Timeline from "./components/Timeline.svelte";
   import Projects from "./components/Projects.svelte";
   import { onMount } from "svelte";
-  import linkedInImg from "./assets/images/LinkedIn.png";
+  import linkedInImg from "./assets/images/linkedIn.png";
   import githubImg from "./assets/images/GitHub.png";
 
   let route = "timeline";
