@@ -20,7 +20,7 @@
       animate = true;
       const t = setTimeout(() => {
         animate = false;
-      }, 3000);
+      }, 4100);
       return t;
     };
     let timeoutId;
@@ -152,6 +152,8 @@ h3 {
   display: inline-block;
   transition: all 0.3s ease;
   cursor: default;
+  color: #111;
+  -webkit-text-fill-color: currentColor;
 }
 
 .name.animate {
@@ -160,7 +162,7 @@ h3 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: rainbow 2s ease-in-out 2;
+  animation: rainbow 2s ease-in-out 2 both, endfade 0.3s ease 3.9s forwards;
   will-change: background-position;
 }
 
@@ -183,6 +185,15 @@ h3 {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes endfade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.9;
   }
 }
 
