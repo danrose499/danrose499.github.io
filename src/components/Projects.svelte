@@ -13,7 +13,7 @@
     },
     {
       title: "danBot",
-      image: musicMateImg,
+      image: danBotImg,
       description: "My very own chatbot! It doesn't do much, but what it does, it does well!",
       href: "https://danrose499.github.io/danBot/"
     },
