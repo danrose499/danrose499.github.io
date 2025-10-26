@@ -20,7 +20,7 @@
       animate = true;
       const t = setTimeout(() => {
         animate = false;
-      }, 4100);
+      }, 3000);
       return t;
     };
     let timeoutId;

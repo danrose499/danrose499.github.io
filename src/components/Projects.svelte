@@ -4,7 +4,7 @@
 
 <div class="projects-container">
   <h1>{title}</h1>
-  <p>Under Construction.</p>
+  <p>Under Construction — Check back soon!</p>
 </div>
 
 <style>

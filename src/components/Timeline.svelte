@@ -1,11 +1,11 @@
 <script>
   import TimelineItem from "./TimelineItem.svelte";
 
-  import ccnyImg from "../assets/images/CCNY.png";
-  import bnyImg from "../assets/images/BNY.png";
-  import pershingImg from "../assets/images/BNY_Pershing.png";
-  import cunyImg from "../assets/images/CUNY.png";
-  import nySenateImg from "../assets/images/NY_Senate.png";
+  import macaulayImg from "../assets/images/timeline/Macaulay.png";
+  import bnyImg from "../assets/images/timeline/BNY.png";
+  import pershingImg from "../assets/images/timeline/BNY_Pershing.png";
+  import cunyImg from "../assets/images/timeline/CUNY.png";
+  import nySenateImg from "../assets/images/timeline/NY_Senate.png";
 </script>
 
 <div class="timeline-container">
@@ -16,8 +16,9 @@
       company="BNY Pershing"
       dateRange="August 2022 - Present"
       description={[
-        "Designed and led development of a high-performance Java Spring Boot backend that processes 100K-200K SWIFT messages daily from IBM MQ, optimizing message parsing efficiency.",
-        "Developed a Java/Angular real-time trading dashboard that consumes 2M-2.5M Kafka messages daily, enabling seamless trade monitoring and improving operational visibility.",
+        // "Designed and led development of a high-performance Java Spring Boot backend that processes 100K-200K SWIFT messages daily from IBM MQ, optimizing message parsing efficiency.",
+        // "Developed a Java/Angular real-time trading dashboard that consumes 2M-2.5M Kafka messages daily, enabling seamless trade monitoring and improving operational visibility.",
+        "Contributed to and led the development of various high performning applications, utilizing Java, Angular, and Spring Boot, Kafka, IBM MQ, Oracle SQL, MongoDB, Docker, etc...",
         "Created an internal VS Code extension for SWIFT message formatting and tag tooltips, reducing manual effort for developers.",
         "Automated Splunk data extraction using Python and shell scripts to analyze user trends, improving system monitoring and decision-making.",
         "Led technical interviews for hiring initiatives and revamped HackerRank problem sets for BNY’s early career program.",
@@ -54,14 +55,16 @@
     />
     <TimelineItem
       side="right"
-      title="Student"
-      company="City College of New York (CCNY)"
-      dateRange="2018 - 2022"
+      title="Computer Engineering Student"
+      company="The Macaular Honors College / City College of New York (CCNY)"
+      dateRange="August 2018 - May 2022"
       description={[
-        "B.S. in Computer Science with focus on software engineering and data structures. Relevant coursework included algorithms, databases, and software development."
+        "B.E. in Computer Engineering with a focus on Software Engineering.",
+        "Relevant coursework included Machine Learning, Computer Graphics, Operating Systems, and Theoretical Computer Science",
+        "Honors: Summa Cum Laude, Dean's List"
       ]}
-      image={ccnyImg}
-      companyUrl="https://www.ccny.cuny.edu"
+      image={macaulayImg}
+      companyUrl="https://macaulay.cuny.edu/"
     />
     <TimelineItem
       side="left"
@@ -89,11 +92,9 @@
 .timeline {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  gap: 2rem; /* Space between items */
+  align-items: center;
+  gap: 2rem;
 }
-
-/* Removed .timeline-line styles */
 
 @media (max-width: 640px) and (orientation: portrait) {
   .timeline-container {
