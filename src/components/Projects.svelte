@@ -1,28 +1,61 @@
 <script>
-  export let title = "Projects";
+  import ProjectCard from "./ProjectCard.svelte";
+  import musicMateImg from "../assets/images/projects/MusicMate.png";
+  export let title = "These are some projects that I've worked on";
+
+  const projects = [
+    {
+      title: "MusicMate",
+      image: musicMateImg,
+      description: "A Svelte app to explore keys and build/play simple chord progressions with guitar and ukulele diagrams",
+      href: "https://danrose499.github.io/Music-Mate/"
+    },
+  ];
 </script>
 
-<div class="projects-container">
+<section class="projects">
   <h1>{title}</h1>
-  <p>Under Construction — Check back soon!</p>
-</div>
+  <div class="grid">
+    {#each projects as p}
+      <ProjectCard title={p.title} image={p.image} description={p.description} href={p.href} />
+    {/each}
+  </div>
+  <div class="note" aria-hidden={true}>
+    Click on a project to open it in a new tab.
+  </div>
+  
+</section>
 
 <style>
-  .projects-container {
+  .projects {
     min-height: calc(100vh - 64px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background: #f5f5f5;
-    text-align: center;
-    padding: 2rem;
+    padding: 2rem 1rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
   }
   h1 {
-    margin-bottom: 0.5rem;
+    text-align: center;
+    margin: 0 0 1.25rem 0;
   }
-  p {
-    font-size: 1.25rem;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+  }
+  .note {
+    text-align: center;
     color: #666;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+  @media (min-width: 640px) {
+    .projects {
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+    .grid {
+      gap: 1.25rem;
+    }
   }
 </style>

@@ -2,8 +2,8 @@
   import Timeline from "./components/Timeline.svelte";
   import Projects from "./components/Projects.svelte";
   import { onMount } from "svelte";
-  import linkedInImg from "./assets/images/linkedIn.png";
-  import githubImg from "./assets/images/GitHub.png";
+  import linkedInImg from "./assets/images/icons/LinkedIn.png";
+  import githubImg from "./assets/images/icons/GitHub.png";
 
   let route = "timeline";
   let animate = false;
@@ -67,7 +67,7 @@
     <h3>I'm a Software Enginner based out of NYC<br>Scroll down to see my journey</h3>
     <Timeline />
   {:else if route === 'projects'}
-    <Projects title="Projects" />
+    <Projects />
   {/if}
 </main>
 
