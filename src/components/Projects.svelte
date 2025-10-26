@@ -1,6 +1,7 @@
 <script>
   import ProjectCard from "./ProjectCard.svelte";
   import musicMateImg from "../assets/images/projects/MusicMate.png";
+  import danBotImg from "../assets/images/projects/danBot.png";
   export let title = "These are some projects that I've worked on";
 
   const projects = [
@@ -9,6 +10,12 @@
       image: musicMateImg,
       description: "A Svelte app to explore keys and build/play simple chord progressions with guitar and ukulele diagrams",
       href: "https://danrose499.github.io/Music-Mate/"
+    },
+    {
+      title: "danBot",
+      image: musicMateImg,
+      description: "My very own chatbot! It doesn't do much, but what it does, it does well!",
+      href: "https://danrose499.github.io/danBot/"
     },
   ];
 </script>
