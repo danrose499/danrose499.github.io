@@ -2,11 +2,17 @@
   import ProjectCard from "./ProjectCard.svelte";
   import musicMateImg from "../assets/images/projects/MusicMate.png";
   import danBotImg from "../assets/images/projects/danBot.png";
-  export let title = "These are some projects that I've worked on";
+  import pocketEarthImg from "../assets/images/projects/pocket-earth.png";
 
   const projects = [
     {
-      title: "MusicMate",
+      title: "Pocket Earth",
+      image: pocketEarthImg,
+      description: "Explore earth, from your pocket!",
+      href: "https://danrose499.github.io/pocket-earth/"
+    },
+    {
+      title: "Music Mate",
       image: musicMateImg,
       description: "A Svelte app to explore keys and build/play simple chord progressions with guitar and ukulele diagrams",
       href: "https://danrose499.github.io/Music-Mate/"
@@ -21,7 +27,7 @@
 </script>
 
 <section class="projects">
-  <h1>{title}</h1>
+  <h1>These are some projects that I've worked on</h1>
   <div class="grid">
     {#each projects as p}
       <ProjectCard title={p.title} image={p.image} description={p.description} href={p.href} />
