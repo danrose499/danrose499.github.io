@@ -2,7 +2,7 @@
   import ProjectCard from "./ProjectCard.svelte";
   import musicMateImg from "../assets/images/projects/MusicMate.png";
   import danBotImg from "../assets/images/projects/danBot.png";
-  import pocketEarthImg from "../assets/images/projects/pocket-earth.png";
+  import pocketEarthImg from "../assets/images/projects/pocketEarth.png";
 
   const projects = [
     {
