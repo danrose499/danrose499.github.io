@@ -6,16 +6,16 @@
 
   const projects = [
     {
-      title: "Pocket Earth",
-      image: pocketEarthImg,
-      description: "Explore earth, from your pocket!",
-      href: "https://danrose499.github.io/pocket-earth/"
-    },
-    {
       title: "Music Mate",
       image: musicMateImg,
       description: "A Svelte app to explore keys and build/play simple chord progressions with guitar and ukulele diagrams",
       href: "https://danrose499.github.io/Music-Mate/"
+    },
+    {
+      title: "Pocket Earth",
+      image: pocketEarthImg,
+      description: "Explore earth, from your pocket!",
+      href: "https://danrose499.github.io/pocket-earth/"
     },
     {
       title: "danBot",
