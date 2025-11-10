@@ -1,12 +1,12 @@
 # Daniel Rosenthal — Portfolio
 
-A small, fast, and friendly personal site built with Svelte and Vite. It highlights my journey on a scrollable timeline and showcases a few side projects. Routing is hash-based and minimal by design, the UI stays lightweight, and deploys go out via GitHub Pages.
+A small, fast, and friendly personal site built with Svelte and Vite. It highlights my journey on a scrollable experience timeline and showcases a few side projects. Routing is hash-based and minimal by design, the UI stays lightweight, and deploys go out via GitHub Pages.
 
 ## Features
 
-- **Timeline view**
+- **Experience view**
 - **Projects gallery** with cards, screenshots, and links
-- **Simple hash routing** between `#/timeline` and `#/projects`
+- **Simple hash routing** between `#/experiences` and `#/projects`
 - **Clean toolbar** with links to LinkedIn and GitHub
 - **Lightweight build** with Vite and vanilla CSS
 
@@ -57,11 +57,11 @@ my-portfolio/
 
 ## Routing
 
-This app uses a tiny hash-based approach. The toolbar buttons set `window.location.hash` and the app renders either the timeline or the projects view.
+This app uses a tiny hash-based approach. The toolbar buttons set `window.location.hash` and the app renders either the Experience or the Projects view.
 
 Routes:
 
-- `#/timeline`
+- `#/experiences`
 - `#/projects`
 
 ## Deployment (GitHub Pages)
@@ -98,6 +98,6 @@ Notes:
 
 ## Contact
 
-- LinkedIn: https://www.linkedin.com/in/daniel--rosenthal/
+- LinkedIn: https://www.linkedin.com/in/rosenthal-d/
 - GitHub: https://github.com/danrose499
 

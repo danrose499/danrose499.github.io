@@ -5,14 +5,14 @@
   import linkedInImg from "./assets/images/icons/LinkedIn.png";
   import githubImg from "./assets/images/icons/GitHub.png";
 
-  let route = "timeline";
+  let route = "experiences";
   let animate = false;
   const HASH_PREFIX = "#/";
 
   function setRouteFromHash() {
     const hash = window.location.hash || "";
-    const val = hash.startsWith(HASH_PREFIX) ? hash.slice(HASH_PREFIX.length) : "timeline";
-    route = (val === "projects" || val === "timeline") ? val : "timeline";
+    const val = hash.startsWith(HASH_PREFIX) ? hash.slice(HASH_PREFIX.length) : "experiences";
+    route = (val === "projects" || val === "experiences") ? val : "experiences";
   }
 
   onMount(() => {
@@ -47,11 +47,11 @@
     <a class="icon" href="/" aria-label="Home">
       <img src="/assets/head.png" alt="Head" width="22" height="22">
     </a>
-    <button class="nav-btn" aria-current={route === 'timeline'} on:click={() => (window.location.hash = '#/timeline')}>Timeline</button>
+    <button class="nav-btn" aria-current={route === 'experiences'} on:click={() => (window.location.hash = '#/experiences')}>Experiences</button>
     <button class="nav-btn" aria-current={route === 'projects'} on:click={() => (window.location.hash = '#/projects')}>Projects</button>
   </nav>
   <div class="nav-right">
-    <a class="icon" href="https://www.linkedin.com/in/daniel--rosenthal/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+    <a class="icon" href="https://www.linkedin.com/in/rosenthal-d/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
       <img src={linkedInImg} alt="LinkedIn" width="22" height="22">
     </a>
     <a class="icon" href="https://github.com/danrose499" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -62,7 +62,7 @@
 </header>
 
 <main>
-  {#if route === 'timeline'}
+  {#if route === 'experiences'}
     <h1>👋 Hi! My name is <span class="name" class:animate={animate}>Daniel Rosenthal</span></h1>
     <h3>I'm a Software Enginner based out of NYC<br>Scroll down to see my journey</h3>
     <Timeline />

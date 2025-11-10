@@ -6,6 +6,7 @@
   import pershingImg from "../assets/images/timeline/BNY_Pershing.png";
   import cunyImg from "../assets/images/timeline/CUNY.png";
   import nySenateImg from "../assets/images/timeline/NY_Senate.png";
+  import cijeImg from "../assets/images/timeline/CIJE.png";
 </script>
 
 <div class="timeline-container">
@@ -78,6 +79,20 @@
       ]}
       image={nySenateImg}
       companyUrl="https://www.schools.nyc.gov"
+    />
+      <TimelineItem
+      side="right"
+      title="Competitor"
+      company="CIJE Innovation Day"
+      dateRange="September 2015 - August 2016"
+      description={[
+        "Spent a year developing and engineering a “smart” dog door that tracked the location of multiple pets, only letting them outside at specific, predetermined times of the day and displaying their location on an LCD screen",
+        "Expanded my Computer Science and Electrical Engineering knowledge by integrating Arduinos, servos, RFID, and other electrical components into the project",
+        "Strengthened my problem-solving skills through countless hours of editing code and rewiring circuits",
+        "Project was presented at the annual CIJE Innovation Day in 2016",
+      ]}
+      image={cijeImg}
+      companyUrl="https://thecije.org/"
     />
   </div>
 </div>

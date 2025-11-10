@@ -9,19 +9,19 @@
       title: "Music Mate",
       image: musicMateImg,
       description: "A Svelte app to explore keys and build/play simple chord progressions with guitar and ukulele diagrams",
-      href: "https://danrose499.github.io/Music-Mate/"
+      href: "https://danielrosenthal.dev/Music-Mate/"
     },
     {
       title: "Pocket Earth",
       image: pocketEarthImg,
       description: "Explore earth, from your pocket!",
-      href: "https://danrose499.github.io/pocket-earth/"
+      href: "https://danielrosenthal.devpocket-earth/"
     },
     {
       title: "danBot",
       image: danBotImg,
       description: "My very own chatbot! It doesn't do much, but what it does, it does well!",
-      href: "https://danrose499.github.io/danBot/"
+      href: "https://danielrosenthal.dev/danBot/"
     },
   ];
 </script>
