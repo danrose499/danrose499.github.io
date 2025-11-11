@@ -78,7 +78,7 @@
         "Managed casework to allow the office to run as efficiently as possible"
       ]}
       image={nySenateImg}
-      companyUrl="https://www.schools.nyc.gov"
+      companyUrl="https://www.nysenate.gov/"
     />
       <TimelineItem
       side="right"
