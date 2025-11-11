@@ -64,7 +64,7 @@
 <main>
   {#if route === 'experiences'}
     <h1>👋 Hi! My name is <span class="name" class:animate={animate}>Daniel Rosenthal</span></h1>
-    <h3>I'm a Software Enginner based out of NYC<br>Scroll down to see my journey</h3>
+    <h3>I'm a Software Engineer based out of NYC<br>Scroll down to see my journey</h3>
     <Timeline />
   {:else if route === 'projects'}
     <Projects />
