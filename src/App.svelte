@@ -1,6 +1,7 @@
 <script>
   import Timeline from "./components/Timeline.svelte";
   import Projects from "./components/Projects.svelte";
+  import Chat from "./components/Chat.svelte";
   import { onMount } from "svelte";
   import linkedInImg from "./assets/images/icons/LinkedIn.png";
   import githubImg from "./assets/images/icons/GitHub.png";
@@ -69,6 +70,7 @@
   {:else if route === 'projects'}
     <Projects />
   {/if}
+  <Chat />
 </main>
 
 <style>
