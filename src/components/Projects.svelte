@@ -12,16 +12,16 @@
       href: "https://danielrosenthal.dev/Music-Mate/"
     },
     {
+      title: "danBot",
+      image: danBotImg,
+      description: "My very own chatbot that you can use to learn more about me and what I'm up to!",
+      href: "https://danielrosenthal.dev/danBot/"
+    },
+    {
       title: "Pocket Earth",
       image: pocketEarthImg,
       description: "Explore earth, from your pocket!",
       href: "https://danielrosenthal.devpocket-earth/"
-    },
-    {
-      title: "danBot",
-      image: danBotImg,
-      description: "My very own chatbot! It doesn't do much, but what it does, it does well!",
-      href: "https://danielrosenthal.dev/danBot/"
     },
   ];
 </script>
