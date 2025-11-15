@@ -43,7 +43,7 @@
   function toggleChat() {
     isOpen = !isOpen;
     if (isOpen && messages.length === 0) {
-      messages = [{ role: 'assistant', content: 'Ask me anything about my experience, projects, or skills!' }];
+      messages = [{ role: 'assistant', content: 'Hi, I\'m Daniel! Ask me anything about my experience, projects, or skills!' }];
       
       // Check API availability when chat is first opened
       if (isApiAvailable) {
@@ -121,7 +121,11 @@
   {#if isOpen}
     <div class="chat-window">
       <div class="chat-header">
-        <h3>Chat with me</h3>
+        <div class="header-content">
+          <span class="status-indicator {isApiAvailable ? 'online' : 'offline'}" 
+                title={isApiAvailable ? 'API is online' : 'API is offline'}></span>
+          <h3>Chat with me</h3>
+        </div>
         <button class="close-btn" on:click={toggleChat} aria-label="Close chat">
           &times;
         </button>
@@ -158,7 +162,7 @@
     </div>
   {/if}
   
-  <button class="chat-button" on:click={toggleChat} aria-label="Open chat">
+  <button class="chat-button {isOpen ? 'hidden' : ''}" on:click={toggleChat} aria-label="Open chat">
     <img src={chatIcon} alt="Chat" width="24" height="24" />
   </button>
 </div>
@@ -166,15 +170,15 @@
 <style>
   .chat-container {
     position: fixed;
-    bottom: 20px;
+    bottom: 0;
     right: 20px;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .chat-button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -186,7 +190,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s, visibility 0.2s;
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 20px;
+  }
+  
+  .chat-button.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .chat-button:hover {
@@ -200,17 +213,31 @@
 
   .chat-window {
     position: absolute;
-    bottom: 70px;
+    bottom: 0;
     right: 0;
-    width: 320px;
+    width: 350px;
     max-width: 90vw;
-    height: 400px;
+    height: 500px;
+    max-height: 80vh;
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    transform-origin: bottom right;
+    animation: slideUp 0.2s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .chat-header {
@@ -222,9 +249,33 @@
     align-items: center;
   }
 
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   .chat-header h3 {
     margin: 0;
     font-size: 1rem;
+  }
+
+  .status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+
+  .status-indicator.online {
+    background-color: #4caf50;
+    box-shadow: 0 0 5px #4caf50;
+  }
+
+  .status-indicator.offline {
+    background-color: #f44336;
+    box-shadow: 0 0 5px #f44336;
   }
 
   .close-btn {
