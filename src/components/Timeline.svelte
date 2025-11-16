@@ -57,7 +57,7 @@
     <TimelineItem
       side="right"
       title="Computer Engineering Student"
-      company="The Macaular Honors College / City College of New York (CCNY)"
+      company="The Macaulay Honors College / City College of New York (CCNY)"
       dateRange="August 2018 - May 2022"
       description={[
         "B.E. in Computer Engineering with a focus on Software Engineering.",
