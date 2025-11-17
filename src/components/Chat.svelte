@@ -162,9 +162,12 @@
     </div>
   {/if}
   
-  <button class="chat-button {isOpen ? 'hidden' : ''}" on:click={toggleChat} aria-label="Open chat">
-    <img src={chatIcon} alt="Chat" width="24" height="24" />
-  </button>
+  <div class="chat-button-container {isOpen ? 'hidden' : ''}">
+    <span class="chat-label">Click to Chat</span>
+    <button class="chat-button" on:click={toggleChat} aria-label="Open chat">
+      <img src={chatIcon} alt="Chat" width="24" height="24" />
+    </button>
+  </div>
 </div>
 
 <style>
@@ -176,6 +179,21 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+  }
+
+  .chat-button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    transition: opacity 0.2s, visibility 0.2s;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .chat-button-container.hidden {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .chat-button {
@@ -190,10 +208,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s, visibility 0.2s;
-    opacity: 1;
-    visibility: visible;
-    margin-bottom: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex-shrink: 0;
+  }
+
+  .chat-label {
+    background: #ffffffee;
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
   }
   
   .chat-button.hidden {
@@ -204,7 +232,7 @@
 
   .chat-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   }
 
   .chat-button:active {
