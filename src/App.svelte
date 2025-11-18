@@ -2,6 +2,7 @@
   import Timeline from "./components/Timeline.svelte";
   import Projects from "./components/Projects.svelte";
   import Chat from "./components/Chat.svelte";
+  import NotFound from "./components/NotFound.svelte";
   import { onMount } from "svelte";
   import linkedInImg from "./assets/images/icons/LinkedIn.png";
   import githubImg from "./assets/images/icons/GitHub.png";
@@ -13,7 +14,7 @@
   function setRouteFromHash() {
     const hash = window.location.hash || "";
     const val = hash.startsWith(HASH_PREFIX) ? hash.slice(HASH_PREFIX.length) : "experiences";
-    route = (val === "projects" || val === "experiences") ? val : "experiences";
+    route = (val === "projects" || val === "experiences") ? val : "404";
   }
 
   onMount(() => {
@@ -69,6 +70,8 @@
     <Timeline />
   {:else if route === 'projects'}
     <Projects />
+  {:else if route === '404'}
+    <NotFound />
   {/if}
   <Chat />
 </main>
