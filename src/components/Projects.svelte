@@ -1,7 +1,7 @@
 <script>
   import ProjectCard from "./ProjectCard.svelte";
   import musicMateImg from "../assets/images/projects/MusicMate.png";
-  import danBotImg from "../assets/images/projects/danBot.png";
+  import danBotImg from "../assets/images/projects/DanBot.png";
   import pocketEarthImg from "../assets/images/projects/pocketEarth.png";
 
   const projects = [
@@ -12,7 +12,7 @@
       href: "https://danielrosenthal.dev/Music-Mate/"
     },
     {
-      title: "danBot",
+      title: "DanBot",
       image: danBotImg,
       description: "My very own chatbot that you can use to learn more about me and what I'm up to!",
       href: "https://danielrosenthal.dev/danBot/"
@@ -20,8 +20,8 @@
     {
       title: "Pocket Earth",
       image: pocketEarthImg,
-      description: "Explore earth, from your pocket!",
-      href: "https://danielrosenthal.devpocket-earth/"
+      description: "Work in Progress... Explore earth, from your pocket!",
+      href: "https://danielrosenthal.dev/pocket-earth/"
     },
   ];
 </script>
