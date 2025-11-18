@@ -85,9 +85,9 @@
     {#if company}
       <div 
         class="company {companyUrl ? 'clickable' : ''}"
+        role={companyUrl ? 'button' : undefined}
+        tabindex={companyUrl ? '0' : undefined}
         on:click={handleImageClick}
-        role={companyUrl ? 'button' : 'div'}
-        tabindex={companyUrl ? 0 : null}
         on:keydown={(e) => companyUrl && e.key === 'Enter' && handleImageClick()}
       >
         {company}
@@ -98,9 +98,9 @@
         src={image} 
         alt={company || title} 
         class="graphic-inline {companyUrl ? 'clickable' : ''}"
-        on:click={handleImageClick}
         role={companyUrl ? 'button' : 'img'}
-        tabindex={companyUrl ? 0 : null}
+        tabindex={companyUrl ? '0' : undefined}
+        on:click={handleImageClick}
         on:keydown={(e) => companyUrl && e.key === 'Enter' && handleImageClick()}
       />
     {/if}
@@ -122,9 +122,9 @@
       src={image} 
       alt={company || title} 
       class="graphic-external graphic {companyUrl ? 'clickable' : ''}"
-      on:click={handleImageClick}
       role={companyUrl ? 'button' : 'img'}
-      tabindex={companyUrl ? 0 : null}
+      tabindex={companyUrl ? '0' : undefined}
+      on:click={handleImageClick}
       on:keydown={(e) => companyUrl && e.key === 'Enter' && handleImageClick()}
     />
   {/if}
